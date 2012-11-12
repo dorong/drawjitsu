@@ -10,7 +10,7 @@ var fileServer = new static.Server('./');
 	
 // This is the port for our web server.
 // you will need to go to http://localhost:8080 to see it
-var port = process.env.PORT || 8080;
+var port = 8080;
 app.listen(port, function () {
 	console.log("Listening on " + port);
 });
