@@ -7,7 +7,8 @@ $(function(){
 	}
 
 	// The URL of your web server (the port is set in app.js)
-	var url = 'http://localhost:8080';
+	//var url = 'http://localhost:8080';
+	var url = 'http://pacific-stream-8418.herokuapp.com/'
 
 	var doc = $(document),
 		win = $(window),
