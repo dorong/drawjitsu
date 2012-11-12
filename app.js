@@ -1,6 +1,12 @@
 // Including libraries
 
-var app = require('http').createServer(handler),
+var express = require('express');
+
+
+
+
+// var app = require('http').createServer(handler),
+var app = express.createServer(express.logger());
 	io = require('socket.io').listen(app),
 	static = require('node-static'); // for serving files
 
