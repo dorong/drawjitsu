@@ -2,13 +2,14 @@ $(function(){
 
 	// This demo depends on the canvas element
 	if(!('getContext' in document.createElement('canvas'))){
-		alert('Sorry, it looks like your browser does not support canvas!');
+		alert('Sorry, it looks like your browser does not support canvas, motherfucker!');
 		return false;
 	}
 
 	// The URL of your web server (the port is set in app.js)
 	//var url = 'http://localhost:8080';
-	var url = 'http://pacific-stream-8418.herokuapp.com/'
+	
+	var url = 'http://localhost:5000';
 
 	var doc = $(document),
 		win = $(window),
@@ -26,7 +27,7 @@ $(function(){
 	var cursors = {};
 
 	var socket = io.connect(url);
-	
+
 	socket.on('moving', function (data) {
 		
 		if(! (data.id in clients)){
@@ -47,6 +48,7 @@ $(function(){
 			// the previous position of this user's mouse pointer
 			
 			drawLine(clients[data.id].x, clients[data.id].y, data.x, data.y);
+			
 		}
 		
 		// Saving the current client state
